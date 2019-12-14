@@ -15,11 +15,11 @@ namespace BankAccount
             BankAccount account2 = AccountCreator(430, 20);
             
 
-            TryDeposit(ref account2, 400);
-            TryDeposit(ref account2, -1000);
-            TryWithdraw(ref account2, 500);
-            TryWithdraw(ref account2, 500);
-            TryWithdraw(ref account2, -1);
+            TryDeposit(account2, 400);
+            TryDeposit(account2, -1000);
+            TryWithdraw(account2, 500);
+            TryWithdraw(account2, 500);
+            TryWithdraw(account2, -1);
 
             Console.ReadLine();
             
@@ -58,7 +58,7 @@ namespace BankAccount
         /// </summary>
         /// <param name="account"></param>
         /// <param name="amount"></param>
-        public static void TryDeposit(ref BankAccount account, double amount)
+        public static void TryDeposit(BankAccount account, double amount)
         {
             try
             {
@@ -85,7 +85,7 @@ namespace BankAccount
         /// </summary>
         /// <param name="account"></param>
         /// <param name="amount"></param>
-        public static void TryWithdraw(ref BankAccount account, double amount)
+        public static void TryWithdraw(BankAccount account, double amount)
         {
             try
             {
